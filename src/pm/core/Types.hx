@@ -1,5 +1,8 @@
 package pm.core;
 
+
+import pm.core.Enums.AnimationEffectConditionKind;
+import pm.core.Enums.IncreaseDecreaseKind;
 import pm.core.Enums.AnimationPositionKind;
 import pm.core.Enums.DamagesKind;
 import pm.system.DynamicValue;
@@ -317,3 +320,277 @@ typedef StaticProgressionJSON = {
    */
   public var f: Float;
 }
+
+typedef ClassJSON = {
+  > LangJSON,
+
+  /**
+   * Initial Level
+   */
+  public var iniL: Int;
+
+  /**
+   * Final Level / Max Level
+   */
+  public var mxL: Int;
+
+  /**
+   * Experience Base
+   */
+  public var eB: Int;
+
+  /**
+   * Experience Inflation
+   */
+  public var eI: Int;
+
+  /**
+   * Experience Table
+   */
+  public var eT: Dynamic;
+}
+
+typedef ClassSkillJSON = {
+  /**
+   * Skill ID
+   */
+  public var id: Int;
+
+  /**
+   * Level
+   */
+  public var l: Int;
+}
+
+// TODO: Fill out with relevant tags if any
+typedef ArmorJSON = {}
+
+typedef CharacteristicJSON = {
+  /**
+   * Increase or Decrease
+   */
+  public var iid: Bool;
+
+  /**
+   * Increase or decrease kind integer
+   */
+  public var idk: IncreaseDecreaseKind;
+
+  /**
+   * Statistic Value ID
+   */
+  public var svid: Int;
+
+  /**
+   * Element Resistance ID
+   */
+  public var erid: Int;
+
+  /**
+   * Status Resistance ID
+   */
+  public var strid: Int;
+
+  /**
+   * Currency Gain ID
+   */
+  public var cgid: Int;
+
+  /**
+   * Skill Cost ID
+   */
+  public var scid: Int;
+
+  /**
+   * Is All Skill Cost
+   */
+  public var iasc: Bool;
+
+  /**
+   * Variable ID
+   */
+  public var vid: Int;
+
+  /**
+   * Operation
+   */
+  public var o: Bool;
+
+  /**
+   * Value
+   */
+  public var v: Float;
+
+  /**
+   * Unit
+   */
+  public var unit: Bool;
+
+  /**
+   * Script
+   */
+  public var s: String;
+
+  /**
+   * Is Allow Equip
+   */
+  public var iae: Bool;
+
+  /**
+   * Is allow equip weapon
+   */
+  public var iaw: Bool;
+
+  /**
+   * Equip weapon type ID
+   */
+  public var ewtid: Int;
+
+  /**
+   * Equip armor type ID
+   */
+  public var eatid: Int;
+
+  /**
+   * Is allow change equipment
+   */
+  public var iace: Bool;
+
+  /**
+   * Change Equipment ID
+   */
+  public var ceid: Int;
+
+  /**
+   * Begin equipment ID
+   */
+  public var beid: Int;
+
+  /**
+   * Is begin weapon
+   */
+  public var ibw: Bool;
+
+  /**
+   * Begin Weapon armor ID
+   */
+  public var bwaid: Int;
+}
+
+typedef PlaySongJSON = {
+  public var isbi: Bool;
+
+  /**
+   * Variable ID
+   */
+  public var vid: Int;
+
+  /**
+   * ID
+   */
+  public var id: Int;
+
+  /**
+   * Is Start
+   */
+  public var is: Bool;
+
+  /**
+   * Start
+   */
+  public var s: Float;
+
+  /**
+   * Is End
+   */
+  public var ie: Bool;
+
+  /**
+   * End
+   */
+  public var e: Float;
+}
+
+typedef BattleMapJSON = {
+  /**
+   * Map ID
+   */
+  public var idm: Int;
+
+  /**
+   * Position
+   */
+  public var p: Array<Float>;
+}
+
+typedef AnimationFrameEffectJSON = {
+  /**
+   * Is Sound Effect
+   */
+  public var ise: Bool;
+
+  /**
+   * Animation Effect Condition Kind
+   */
+  public var c: AnimationEffectConditionKind;
+}
+
+typedef CameraPropertiesJSON = {
+  /**
+   * Distance
+   */
+  public var d: Float;
+
+  /**
+   * Horizontal Angle
+   */
+  public var ha: Float;
+
+  /**
+   * Vertical Angle
+   */
+  public var va: Float;
+
+  /**
+   * Target Offset X
+   */
+  public var tox: Float;
+
+  /**
+   * Target Offset Y
+   */
+  public var toy: Float;
+
+  public var toz: Float;
+
+  /**
+   * Is Square Target Offset X
+   */
+  public var istox: Bool;
+
+  /**
+   * Is Square Target Offset Y
+   */
+  public var istoy: Bool;
+
+  /**
+   * Is Square Target Offset Z
+   */
+  public var istoz: Bool;
+
+  /**
+   * Field of view
+   */
+  public var fov: Float;
+
+  /**
+   * Near the near
+   */
+  public var n: Float;
+
+  /**
+   * Far the far
+   */
+  public var f: Float;
+}
+
